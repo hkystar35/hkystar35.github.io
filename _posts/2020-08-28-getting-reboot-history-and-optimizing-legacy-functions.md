@@ -8,7 +8,7 @@ last_modified_at: 2025-08-23
 
 The other day, I logged on to a jump server and, while investigating an unrelated issue, I noticed the BG Info background showed the Last Reboot as March 1st, 2020. “That can’t be right,” I thought. “We have weekly maintenance windows to reboot these servers.”
 
-As I opened an old stand-by function from my stash (originally posted here: https://gallery.technet.microsoft.com/scriptcenter/Get-RebootHistory-bc804819 in 2015) and ran it, I was a bit annoyed at how SLOW it was. I decide to open the function and was saddened to see that it wasn’t even using Get-Event… It was using WMI to comb Event Logs. So, I deviated from my original task and set out fixing it. Here’s how:
+As I opened an old stand-by function from my stash (originally posted here: [(RIP Technet) https://learn.microsoft.com/en-us/scriptcenter/Get-RebootHistory-bc804819](https://gallery.technet.microsoft.com/scriptcenter/Get-RebootHistory-bc804819) in 2015) and ran it, I was a bit annoyed at how SLOW it was. I decide to open the function and was saddened to see that it wasn’t even using Get-Event… It was using WMI to comb Event Logs. So, I deviated from my original task and set out fixing it. Here’s how:
 
 ## Identify what to optimize
 
@@ -42,12 +42,12 @@ Remove-Variable Params,count
 Remove-Variable Params,count
 ```
 
-> **Get-EventLog InstanceID** - 
+> **Get-EventLog InstanceID** -
 > Even though it’s not used in the script, I wanted to point out that `Get-EventLog`’s InstanceID value does not correspond to the Event ID used in the other cmdlets. I used this [ConvertTo-InstanceID](https://community.idera.com/database-tools/powershell/powertips/b/tips/posts/translate-eventid-to-instanceid) function to get the corresponding InstanceID for each Event ID.
 
 Which resulted in the following times:
 
-[![Measure cmdlets to search Event Logs](../assets/img/2020-08-28_Snag_21a99dae.png)]
+![Measure cmdlets to search Event Logs](../assets/img/2020-08-28_Snag_21a99dae.png)
 
 A 99.78% decrease in time!
 
@@ -92,6 +92,7 @@ $Params = @{
 <#..#>
 $Events = Get-WinEvent @Params
 ```
+
 ## Validating output
 
 Next we’ll need to verify the integrity of this `Switch` statement
@@ -107,11 +108,11 @@ Switch ($Event.EventCode) {
 
 Testing the output of our new `$Events` variable, we see the properties of the first element do not have the same property names. Most are easy enough to match up, save for the `InsertionStrings` property  
 
-[![Event property compare](../assets/img/2020-08-28_Snag_2180a815.png)]
+![Event property compare](../assets/img/2020-08-28_Snag_2180a815.png)
   
 For the `InsertionStrings` property, I just went exploring and tried this, which had the corresponding values:  
 
-[![6008 properties](../assets/img/2020-08-28_Snag_2184b929.png)]
+![6008 properties](../assets/img/2020-08-28_Snag_2184b929.png)
   
 and led to the new Switch statement:
 
