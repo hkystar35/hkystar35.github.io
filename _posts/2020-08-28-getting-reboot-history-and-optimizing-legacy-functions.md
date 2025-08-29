@@ -47,7 +47,7 @@ Remove-Variable Params,count
 
 Which resulted in the following times:
 
-[![Measure cmdlets to search Event Logs](../assets/img/2020-08-28_Snag_21a99dae.png)](../assets/img/2020-08-28_Snag_21a99dae.png)
+[![Measure cmdlets to search Event Logs](../assets/img/2020-08-28_Snag_21a99dae.png)]
 
 A 99.78% decrease in time!
 
@@ -107,11 +107,11 @@ Switch ($Event.EventCode) {
 
 Testing the output of our new `$Events` variable, we see the properties of the first element do not have the same property names. Most are easy enough to match up, save for the `InsertionStrings` property  
 
-[![Event property compare](../assets/img/2020-08-28_Snag_2180a815.png)](../assets/img/2020-08-28_Snag_2180a815.png)
+[![Event property compare](../assets/img/2020-08-28_Snag_2180a815.png)]
   
 For the `InsertionStrings` property, I just went exploring and tried this, which had the corresponding values:  
 
-[![6008 properties](../assets/img/2020-08-28_Snag_2184b929.png)](../assets/img/2020-08-28_Snag_2184b929.png)
+[![6008 properties](../assets/img/2020-08-28_Snag_2184b929.png)]
   
 and led to the new Switch statement:
 
