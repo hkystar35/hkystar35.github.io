@@ -159,7 +159,7 @@ Let’s look briefly at each. A reminder, these are from my company’s point of
 
 The biggest name in the MDM game when it comes to Apple products, Jamf (pronounced jam-FFF) has built up a giant reputation and an incredibly large customer base (and matching cost). [Smart Groups](https://docs.jamf.com/10.38.0/jamf-pro/documentation/Smart_Groups.html) are the single best feature, in my opinion, coupled with [Extension Attributes](https://docs.jamf.com/10.38.0/jamf-pro/documentation/Computer_Extension_Attributes.html), so if organization is key for your needs, start here. [Jamf Nation](https://www.jamf.com/community/jamf-nation/) is a fantastic and widely-used resource. Though Jamf’s [Feature Request](https://ideas.jamf.com/) platform leaves a lot of popular requests sitting stale (The current Top Request with 1,700+ votes is still sitting at “Reviewed” status after 7 years).
 
-[Jamf Pricing](http://jamf.com/pricing/)
+[Jamf Pricing](https://www.jamf.com/pricing/)
 
 ### Kandji
 
