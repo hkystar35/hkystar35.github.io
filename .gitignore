@@ -21,3 +21,5 @@ package-lock.json
 assets/js/dist
 _drafts/*
 _start-local-server.zsh
+.vscode/*
+*.code-workspace
