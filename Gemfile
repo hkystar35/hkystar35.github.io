@@ -24,3 +24,15 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 # https://github.com/jekyll/jekyll-compose
 gem 'jekyll-compose', group: [:jekyll_plugins]
+
+# https://nhoizey.github.io/jekyll-postfiles/
+#gem 'jekyll-postfiles', group: [:jekyll_plugins]
+gem "csv", "~> 3.3"
+
+gem "logger", "~> 1.7"
+
+gem "base64", "~> 0.3.0"
+
+gem 'jekyll-gist'
+
+gem "middleman-syntax"

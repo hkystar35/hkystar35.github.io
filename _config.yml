@@ -14,9 +14,9 @@ timezone: America/Boise
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Apple-soft # the main title
+title: Endpoint Engineering # the main title
 
-tagline: I'm an Apple boy / In a Windows world. # it will display as the sub-title
+tagline: "'{0}slash' -f (Get-Random 'forward','back')" # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   Thoughts, musings, and blogs relating to endpoint engineering. And occasionally non-work related items.
@@ -85,7 +85,7 @@ theme_mode: # [light | dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: "https://raw.githubusercontent.com/hkystar35/hkystar35.github.io/main"
+img_cdn: #"https://raw.githubusercontent.com/hkystar35/hkystar35.github.io/main" #uncomment when ready to publich
 
 # the avatar on sidebar, support local or CORS resources
 avatar: "assets/img/avatar.png"
@@ -160,7 +160,10 @@ kramdown:
 collections:
   tabs:
     output: true
-    sort_by: order
+    sort_by: last_modified_at
+
+plugins:
+  - jekyll-gist
 
 defaults:
   - scope:
@@ -211,10 +214,10 @@ exclude:
   - package*.json
 
 jekyll-archives:
-  enabled: [categories, tags]
+  enabled: [tags] # [categories, tags]
   layouts:
-    category: category
+    # category: category
     tag: tag
   permalinks:
     tag: /tags/:name/
-    category: /categories/:name/
+    # category: /categories/:name/
