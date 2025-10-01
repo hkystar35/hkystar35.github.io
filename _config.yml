@@ -57,10 +57,8 @@ social:
 # The end of `jekyll-seo-tag` settings
 
 # Web Analytics Settings
-jekyll_analytics:
-  GoogleAnalytics:
-    id: G-E5EYFFJTW9 # fill in your Google Analytics ID
-    anonymizeIp: false
+google_analytics:
+  id: G-E5EYFFJTW9 # fill in your Google Analytics ID
 
 # Pageviews settings
 pageviews:

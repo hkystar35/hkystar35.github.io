@@ -37,4 +37,4 @@ gem 'jekyll-gist'
 
 gem "middleman-syntax"
 
-gem 'jekyll-analytics'
+gem 'google-analytics'
