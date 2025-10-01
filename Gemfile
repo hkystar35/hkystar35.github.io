@@ -36,3 +36,5 @@ gem "base64", "~> 0.3.0"
 gem 'jekyll-gist'
 
 gem "middleman-syntax"
+
+gem 'jekyll-analytics'
