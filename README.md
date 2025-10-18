@@ -3,7 +3,7 @@
 [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
 [![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
 
-Huge shout-out to the [Chirpy](chirpy) theme [Continuous Deployment](CD)!
+Huge shout-out to the [Chirpy](chirpy) theme!
 
 Opinions and words are my own.
 
